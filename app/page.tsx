@@ -1,11 +1,11 @@
-import Image from "next/image";
-import UI from "./ui";
+import Image from 'next/image';
+import UI from './ui';
 
 export const metadata = {
-  title: "Minibox",
-  description: "A minimalistic Dropbox clone",
+    title: 'Minibox',
+    description: 'A minimalistic Dropbox clone',
 };
 
 export default function Home() {
-  return <UI />;
+    return <UI />;
 }

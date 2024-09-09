@@ -1,31 +1,28 @@
-"use client";
+'use client';
 
-import DropboxImageList from "components/dropbox-image-list";
-import FileDragDropZone from "components/file-dragdropazone";
-import Logo from "components/logo";
-import SearchComponent from "components/search-component";
-import Image from "next/image";
-import { useState } from "react";
+import DropboxImageList from 'components/dropbox-image-list';
+import FileDragDropZone from 'components/file-dragdropazone';
+import Logo from 'components/logo';
+import SearchComponent from 'components/search-component';
+import Image from 'next/image';
+import { useState } from 'react';
 
 export default function UI() {
-  const [searchInput, setSearchInput] = useState("");
+    const [searchInput, setSearchInput] = useState('');
 
-  return (
-    <main className="w-full p-2 flex flex-col gap-4">
-      {/* Logo */}
-      <Logo />
+    return (
+        <main className="w-full p-2 flex flex-col gap-4">
+            {/* Logo */}
+            <Logo />
 
-      {/* Search Component */}
-      <SearchComponent
-        searchInput={searchInput}
-        setSearchInput={setSearchInput}
-      />
+            {/* Search Component */}
+            <SearchComponent searchInput={searchInput} setSearchInput={setSearchInput} />
 
-      {/* File Drag&Drop Zone */}
-      <FileDragDropZone />
+            {/* File Drag&Drop Zone */}
+            <FileDragDropZone />
 
-      {/* Dropbox Image List */}
-      <DropboxImageList />
-    </main>
-  );
+            {/* Dropbox Image List */}
+            <DropboxImageList />
+        </main>
+    );
 }
