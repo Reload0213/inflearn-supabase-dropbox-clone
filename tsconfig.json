@@ -1,26 +1,36 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
+      "target": "es5",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true, // 자바스크립트 허용
+      "noImplicitAny": false, // any 타입 기본
+      "strictNullChecks": false,
+      "skipLibCheck": true,
+      "strict": false,
+      "forceConsistentCasingInFileNames": false,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "baseUrl": ".",
+      "plugins": [
+          {
+              "name": "next"
+          }
+      ],
+      "paths": {
+          "*": ["./*"]
       }
-    ],
-    "paths": {
-      "@/*": ["./*"]
-    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "ts-node": {
+      "compilerOptions": {
+          "module": "commonjs"
+      }
+  }
 }
