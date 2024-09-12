@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "node", // Node.js 애플리케이션 디버그 모드
+            "request": "launch", // launch: 애플리케이션을 직접 실행
+            "name": "Launch Program", // 디버깅 구성의 이름
+            "program": "${workspaceFolder}/path/to/your/app.js", // 실행할 파일 경로
+            "skipFiles": ["<node_internals>/**"], // Node.js 내부 파일 제외
+            "console": "integratedTerminal" // 통합 터미널에서 로그 출력
+        }
+    ]
+}
